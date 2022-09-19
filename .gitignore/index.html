@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body{
+            background: linear-gradient(94deg,#4383c3 20%,#30b4cb 90%);
+            font-family: "Open Sans",Helvetica,sans-serif;
+            font-size: 1.6rem;
+            color: #fff;
+            letter-spacing: -.5px;
+            -webkit-font-smoothing: antialiased;
+            height: 90vh;
+            margin: 0px;
+            padding: 0px;
+        }
+        /* div{
+            border: 1px solid red;
+        } */
+        h1{
+            text-align: center;
+        }
+        #result{
+            height: 50px;
+            text-align: center;
+        }
+        #container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .option{
+            width: 150px;
+        }
+        .option img{
+            width: auto;
+            height: 80px;
+            margin: 30px;
+        }
+        .choosed{
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Rock Paper Scissors</h1>
+    </div>
+    <div id="result">
+
+    </div>
+    <div id="container">
+        <div class="option">
+            <p>Choose One</p>
+            <div>
+                <img onclick="frock1()" src="photos/rock.svg" alt="Rock">
+            </div>
+            <div>
+                <img onclick="fpaper1()" src="photos/paper.svg" alt="Paper">
+            </div>
+            <div>
+                <img onclick="fscr1()" src="photos/scissors.svg" alt="Scissors">
+            </div>
+        </div>
+        <div class="choosed" id="choosed1">
+
+        </div>
+        <div class="choosed" id="choosed2">
+            
+        </div>
+        <div class="option">
+            <p></p>
+            <div>
+                <img src="photos/rock.svg" alt="Rock">
+            </div>
+            <div>
+                <img src="photos/paper.svg" alt="Paper">
+            </div>
+            <div>
+                <img src="photos/scissors.svg" alt="Scissors">
+            </div>
+        </div>
+    </div>
+    <script>
+        let random = 0;
+        function frock1(){
+            document.getElementById('choosed1').innerHTML = "<img src='photos/rock.svg' />";
+            check(1);
+        }
+        function fpaper1(){
+            document.getElementById('choosed1').innerHTML = "<img src='photos/paper.svg' />";
+            check(2);
+        }
+        function fscr1(){
+            document.getElementById('choosed1').innerHTML = "<img src='photos/scissors.svg' />";
+            check(3);
+        }
+
+        function check(value){
+            random = Math.floor((Math.random() * 3) + 1);
+            if(value == random){
+                document.getElementById('result').innerHTML = "It's a Tie";
+            }else if(value == 1){
+                if(random == 2){
+                    document.getElementById('result').innerHTML = "You Lose";
+                }else{
+                    document.getElementById('result').innerHTML = "You Won";
+                }
+            }
+            else if(value == 2){
+                if(random == 3){
+                    document.getElementById('result').innerHTML = "You Lose";
+                }else{
+                    document.getElementById('result').innerHTML = "You Won";
+                }
+            }
+            else if(value == 3){
+                if(random == 1){
+                    document.getElementById('result').innerHTML = "You Lose";
+                }else{
+                    document.getElementById('result').innerHTML = "You Won";
+                }
+            }
+            if(random == 1){
+                document.getElementById('choosed2').innerHTML = "<img src='photos/rock.svg' />";
+            }else if(random == 2){
+                document.getElementById('choosed2').innerHTML = "<img src='photos/paper.svg' />";
+            }else{
+                document.getElementById('choosed2').innerHTML = "<img src='photos/scissors.svg' />";
+            }
+
+        }
+    </script>
+</body>
+</html>

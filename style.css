@@ -1,0 +1,94 @@
+body{
+    background: linear-gradient(94deg,#4383c3 20%,#30b4cb 90%);
+    font-family: "Open Sans",Helvetica,sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: -.5px;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px;
+    padding: 0px;
+}
+/* div{
+    border: 1px solid red;
+} */
+h1{
+    text-align: center;
+}
+#result{
+    height: 50px;
+    text-align: center;
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.option{
+    width: 150px;
+}
+.option img{
+    width: auto;
+    height: 80px;
+    margin: 30px;
+}
+.choosed{
+    width: 150px;
+    height: 150px;
+}
+
+p {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+    border: solid 1px #a6d8a8;
+    margin: auto;
+}
+#table-title{
+    max-width: 50vw;
+    min-width: 500px;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+
+/* Table styles here */
+#table-Container{
+    max-width: 50vw;
+    min-width: 500px;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: none;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+}
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+table tr:nth-last-child(1){
+    display: none;
+}
+table tr:hover {
+    background-color: #ddd;
+}
+table img{
+    height: 50px;
+    width: auto;
+}

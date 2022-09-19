@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Rock Paper Scissors</h1>
+    </div>
+    <div id="result">
+
+    </div>
+    <div id="container">
+        <div class="option">
+            <p>Choose One</p>
+            <div>
+                <img onclick="frock1()" src="photos/rock.svg" alt="Rock">
+            </div>
+            <div>
+                <img onclick="fpaper1()" src="photos/paper.svg" alt="Paper">
+            </div>
+            <div>
+                <img onclick="fscr1()" src="photos/scissors.svg" alt="Scissors">
+            </div>
+        </div>
+        <div class="choosed" id="choosed1">
+
+        </div>
+        <div class="choosed" id="choosed2">
+            
+        </div>
+        <div class="option">
+            <p>Opponant</p>
+            <div>
+                <img src="photos/rock.svg" alt="Rock">
+            </div>
+            <div>
+                <img src="photos/paper.svg" alt="Paper">
+            </div>
+            <div>
+                <img src="photos/scissors.svg" alt="Scissors">
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin:10vh;">
+
+    <p id="table-title" onclick="showTable()">Previous Match Results</p>
+
+    <div id="table-Container">
+        <table>
+            <tr>
+                <th style="width: 30%;">Your Pick</th>
+                <th style="width: 40%;">Result</th>
+                <th style="width: 30%;">Opponant</th>
+            </tr>
+            <tr>
+                <td>stone</td>
+                <td>you won</td>
+                <td>sciossers</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr style="margin:10vh;">
+
+</body>
+</html>
